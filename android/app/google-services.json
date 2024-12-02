@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "157581861839",
+    "project_id": "fantasy-4b7a6",
+    "storage_bucket": "fantasy-4b7a6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157581861839:android:a33d7f14282abefe21e8ba",
+        "android_client_info": {
+          "package_name": "com.example.fantasy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARdUhJpX5I90BzQaCbsL1S-caTl2nqKkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
