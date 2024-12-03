@@ -1,5 +1,6 @@
 import 'package:fantasy/core/constants/app_assets.dart';
-import 'package:fantasy/features/home/presentation/views/home.dart';
+import 'package:fantasy/core/router/navigation.dart';
+import 'package:fantasy/core/router/routes_names.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -13,11 +14,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const Home(),
-          ));
+      customReplacementNavigate(context, RoutesNames.signin);
     });
     super.initState();
   }
@@ -25,7 +22,10 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(child: Image.asset(AppAssets.logo,)));
+        backgroundColor: Colors.white,
+        body: Center(
+            child: Image.asset(
+          AppAssets.logo,
+        )));
   }
 }
