@@ -2,6 +2,7 @@ import 'package:fantasy/core/router/routes_names.dart';
 import 'package:fantasy/features/auth/presentation/view_model/auth_cubit.dart';
 import 'package:fantasy/features/auth/presentation/views/login.dart';
 import 'package:fantasy/features/auth/presentation/views/signup.dart';
+import 'package:fantasy/features/home/presentation/cubit/home_cubit.dart';
 import 'package:fantasy/features/home/presentation/views/home.dart';
 import 'package:fantasy/features/splash/splash.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,5 +20,7 @@ final GoRouter router = GoRouter(routes: [
     create: (context) => AuthCubit(),
     child: const Signup()),),
   GoRoute(
-  path: RoutesNames.home,builder: (context, state) => const Home(),),
+  path: RoutesNames.home,builder: (context, state) => BlocProvider(
+    create: (context) => HomeCubit(),
+    child: const Home()),),
 ]);
